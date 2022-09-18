@@ -1,0 +1,101 @@
+1. Square Pattern   
+
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+
+
+2. Pyramid Pattern   
+
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+
+3. Right Angle Triangle Pattern   
+
+*  
+* *  
+* * *  
+* * * *  
+* * * * *  
+
+
+4. Diamond Pattern 
+
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+     
+
+
+5. Right Angle down triangle Pattern   
+
+* * * * *  
+* * * *  
+* * *  
+* *  
+*  
+
+
+6. Down Pyramid Pattern   
+
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+
+
+7. Mirror Right Angle Triangle Pattern   
+
+    *
+   **
+  ***
+ ****
+*****
+
+
+8. Mirror Right Angle Down Triangle Pattern   
+
+*****
+ ****
+  ***
+   **
+    *
+
+
+9. Right Pascal's Triangle Pattern   
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+
+10. Left Pascal's Triangle Pattern   
+
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
+    *
