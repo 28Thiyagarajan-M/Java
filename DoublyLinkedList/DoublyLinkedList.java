@@ -62,8 +62,9 @@ public class DoublyLinkedList {
     
     public void insert(int val,int index){
         
-        if(insert == 0){
-            return insertFirst(val);
+        if(index == 0){
+            insertFirst(val);
+            return;
         }
         
         Node temp = head;
@@ -72,12 +73,41 @@ public class DoublyLinkedList {
         }
         
         Node node = new Node(val,temp.next,temp);
+        temp.next.prev = node;
         temp.next = node;
+        
         
         // node.next = temp.next;
         // node.prev = temp;
         // temp.next = node;
         
+    }
+    public void insertAfter(int aft, int val){
+        
+        Node p = find(aft);
+        
+        if(p == null) System.out.println("Doesn't Exists!!");
+        
+        Node node = new Node(val);
+        
+        
+        node.prev = p;
+        node.next = p.next;
+        
+        p.next.prev = node;
+        p.next = node;
+    }
+    
+    
+    public Node find(int aft){
+        Node node = head;
+        
+        while(node != null){
+            if(node.val == aft) return node;
+            node = node.next;
+        }
+        
+        return null;
     }
     
     
@@ -94,11 +124,11 @@ public class DoublyLinkedList {
         
         System.out.println("End");
         
-        // while(last != null){
-        //     System.out.print(last.val + " - > ");
-        //     last = last.prev;
-        // }
-        // System.out.println("Start");        
+        while(last != null){
+            System.out.print(last.val + " - > ");
+            last = last.prev;
+        }
+        System.out.println("Start");        
     }
     
     
@@ -108,19 +138,23 @@ public class DoublyLinkedList {
         DoublyLinkedList dll = new DoublyLinkedList();
         
         dll.insertFirst(10);
-        dll.insertFirst(5);
-        dll.insertFirst(30);
-        dll.insertFirst(20);
-        dll.insertFirst(100);
+         dll.insertFirst(5);
+          dll.insertFirst(30);
+          
+           dll.insertFirst(20);
+            dll.insertFirst(100);
             
              
-        dll.insertLast(999);
+            dll.insertLast(999);
             
-        dll.display();
+            dll.display();
             
-        dll.insert(2810,2);
+            dll.insert(2810,2);
             
-        dll.display();
+            dll.display();
+            
+            dll.insertAfter(30,31);
+            dll.display();
             
         
        
