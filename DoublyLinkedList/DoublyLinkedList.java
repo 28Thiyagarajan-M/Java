@@ -38,7 +38,14 @@ public class DoublyLinkedList {
     
     public void insertLast(int val){
         
-        Node node = new Node(val);
+         Node node = new Node(val);
+         
+        if(head == null){
+            head = node;
+            return;
+        }
+        
+       
         
         Node temp = head;
    
@@ -101,20 +108,19 @@ public class DoublyLinkedList {
         DoublyLinkedList dll = new DoublyLinkedList();
         
         dll.insertFirst(10);
-         dll.insertFirst(5);
-          dll.insertFirst(30);
-          
-           dll.insertFirst(20);
-            dll.insertFirst(100);
+        dll.insertFirst(5);
+        dll.insertFirst(30);
+        dll.insertFirst(20);
+        dll.insertFirst(100);
             
              
-            dll.insertLast(999);
+        dll.insertLast(999);
             
-            dll.display();
+        dll.display();
             
-            dll.insert(2810,2);
+        dll.insert(2810,2);
             
-            dll.display();
+        dll.display();
             
         
        
