@@ -1,54 +1,54 @@
-public class Stack{
-    
+public class Stack {
     private Node top;
     private int size;
-    
-    class Node{
+
+    class Node {
         int value;
         Node next;
-        
-        Node(int value){
+
+        Node(int value) {
             this.value = value;
         }
     }
-    
-    Stack(){
+
+    Stack() {
         this.size = 0;
     }
-    
-    public void push(int value){
+
+    public void push(int value) {
         Node node = new Node(value);
-        if(size == 0){
+        if (size == 0) {
             top = node;
-        }else{
+        } else {
             node.next = top;
             top = node;
         }
-        
+
         size++;
     }
-    
-    public void pop( ){
-        if(size == 0){
+
+    public void pop() {
+        if (size == 0) {
             System.out.println("Stack is empty!");
-        }else{
+        } else {
             System.out.println(top.value);
             top = top.next;
-               size--;
+            size--;
         }
-     
     }
-    public void display(){
+
+    public void display() {
         Node temp = top;
-        System.out.println("Top : "+ top.value);
-        System.out.println("Size : "+ size);
-        while(temp != null){
-            System.out.print(temp.value+" -> ");
+        System.out.println("Top: " + top.value);
+        System.out.println("Size: " + size);
+        while (temp != null) {
+            System.out.print(temp.value + " -> ");
             temp = temp.next;
         }
+        System.out.println("null");
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Stack s = new Stack();
         // s.display();
         s.push(1);
@@ -60,5 +60,4 @@ public class Stack{
         s.pop();
         s.display();
     }
-    
 }
